@@ -8,9 +8,6 @@ class Login
   password = Base64.strict_encode64(ARGV[1])
   # servie_id = ARGV[2]
   servie_id = 'a3730fc998a5d2558d8610dace40444c|1511946098|1511945951'
-
-  aliyungf_tc = 'AQAAADX5nyzuzQQAwqCdt5RwUtgwjWyH'
-  acw_tc = 'AQAAAHIs1UMU9QUAwqCdtzUfPazSMy8Q'
     
   uri = URI.parse("https://union.vanke.com/api/Member/Login")
   get_point_url = URI.parse("https://union.vanke.com/api/Points/GetMyPoints")
