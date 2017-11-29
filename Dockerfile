@@ -1,4 +1,4 @@
 FROM ruby:2.3
 
 
-CMD ruby login.rb
+CMD ruby login.rb $PHONE $PASSWORD
