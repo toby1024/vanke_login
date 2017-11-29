@@ -6,9 +6,6 @@ class Login
 
   phone = Base64.strict_encode64(ARGV[0])
   password = Base64.strict_encode64(ARGV[1])
-
-  p phone
-  p password
     
   uri = URI.parse("https://union.vanke.com/api/Member/Login")
   
