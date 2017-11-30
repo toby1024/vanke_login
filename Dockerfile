@@ -1,4 +1,7 @@
 FROM ruby:2.3
 
+RUN echo '====================start vanke login===================='
 
-CMD ruby login.rb $PHONE $PASSWORD
+COPY . /app
+
+CMD ruby /app/login.rb $PHONE $PASSWORD
