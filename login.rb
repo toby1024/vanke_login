@@ -32,13 +32,12 @@ class Login
       response_data = JSON.parse(response.body)
       access_token = response_data["body"]["access_token"]
       refresh_token = response_data["body"]["refresh_token"]
-      p access_token
-      p refresh_token
+      vk_id = response_data["body"]["AgentInfo"]["Id"]
 
       # get my points
       Net::HTTP.start(get_point_url.host, get_point_url.port, use_ssl: true) do |http2|
         request2 = Net::HTTP::Post.new(get_point_url, 'Content-Type' => 'application/json')
-        request2.body = { body: 263104,
+        request2.body = { body: vk_id,
                         header: { version: "",
                                   clientOSType: "android",
                                   accessToken: access_token,
